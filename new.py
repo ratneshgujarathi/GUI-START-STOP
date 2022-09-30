@@ -54,10 +54,12 @@ if __name__=='__main__':
     if plug:
         onbutton = tkinter.Button(root,text="Start", command=switch)
         onbutton.pack()
+        my_label = tkinter.Label(root, text="")
+        my_label.pack(pady=20)
     else:
         onbutton = tkinter.Button(root,text="stop", command=switch)
         onbutton.pack()
-    my_label = tkinter.Label(root, text="")
-    my_label.pack(pady=20)
+        my_label = tkinter.Label(root, text="running")
+        my_label.pack(pady=20)
     
     root.mainloop()
