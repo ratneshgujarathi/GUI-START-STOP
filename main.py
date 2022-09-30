@@ -1,6 +1,7 @@
 import threading
 import tkinter
 import time
+import os
 from service import run
 
 
@@ -20,6 +21,7 @@ class RepeatExecute(object):
             print(time.time())
             thrd = threading.Thread(target=self.autorun)
             thrd.start()
+            print(thrd.ident)
             self.master.after(t,self.call_self)
 
     def set_time(self,t):
